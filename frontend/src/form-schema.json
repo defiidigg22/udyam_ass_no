@@ -1,0 +1,54 @@
+[
+  {
+    "id": "ctl00_ContentPlaceHolder1_txtadharno",
+    "name": "ctl00$ContentPlaceHolder1$txtadharno",
+    "label": "1. Aadhaar Number/ आधार संख्या",
+    "placeholder": "Your Aadhaar No",
+    "type": "text",
+    "validation": {
+      "required": true,
+      "maxLength": "12"
+    }
+  },
+  {
+    "id": "ctl00_ContentPlaceHolder1_txtownername",
+    "name": "ctl00$ContentPlaceHolder1$txtownername",
+    "label": "2. Name of Entrepreneur / उद्यमी का नाम",
+    "placeholder": "Name as per Aadhaar",
+    "type": "text",
+    "validation": {
+      "required": true
+    }
+  },
+  {
+    "id": "pincode",
+    "name": "pincode",
+    "label": "3. PIN Code",
+    "placeholder": "Enter your PIN Code",
+    "type": "text",
+    "validation": {
+      "required": true,
+      "maxLength": "6"
+    }
+  },
+  {
+    "id": "city",
+    "name": "city",
+    "label": "4. City",
+    "placeholder": "City (auto-filled)",
+    "type": "text",
+    "validation": {
+      "required": false
+    }
+  },
+  {
+    "id": "state",
+    "name": "state",
+    "label": "5. State",
+    "placeholder": "State (auto-filled)",
+    "type": "text",
+    "validation": {
+      "required": false
+    }
+  }
+]

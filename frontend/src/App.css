@@ -1,0 +1,13 @@
+/* In frontend/src/App.css */
+.App {
+  /* Use flexbox to center its children */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Make it take up the full height and add the background */
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  padding: 20px; /* Add some padding for small screens */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
