@@ -39,7 +39,9 @@ app = FastAPI()
 # --- CORS Middleware (Unchanged) ---
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "https://udyam-ass-no.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
