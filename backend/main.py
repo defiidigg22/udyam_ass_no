@@ -1,5 +1,5 @@
 # In main.py
-
+import os
 from typing import Annotated
 from fastapi import FastAPI, Depends, HTTPException # <--- NEW: Import HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -10,14 +10,15 @@ from pydantic import BaseModel, constr
 from sqlalchemy.ext.declarative import declarative_base
 
 # --- Database Setup (Unchanged) ---
-DATABASE_URL = "postgresql://postgres:13271327@localhost/udyam_db"
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:13271327@localhost/udyam_db")
+
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
 
 # --- Database Table Model (Unchanged) ---
-class Submission(Base):
+class Submission(Base): 
     __tablename__ = "submissions"
     id = Column(Integer, primary_key=True, index=True)
     aadhaar_number = Column(String(12), unique=True, index=True)
